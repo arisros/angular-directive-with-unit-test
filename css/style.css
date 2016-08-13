@@ -1,0 +1,55 @@
+.orange {
+  background: #E87E3E; }
+
+.yellow {
+  background: #EABE55; }
+
+.green {
+  background: #55C88F; }
+
+.box-counter {
+  position: relative;
+  color: white;
+  float: left;
+  margin: 4px;
+  width: 200px;
+  height: 50px; }
+
+.orange .box-footer {
+  background: #d9621a; }
+
+.yellow .box-footer {
+  background: #e4ad28; }
+
+.green .box-footer {
+  background: #39b176; }
+
+.box-counter .box-footer {
+  width: 200px;
+  position: absolute;
+  bottom: 0;
+  font-size: 12px; }
+
+span {
+  padding: 5px; }
+
+h4, h5 {
+  margin: 0;
+  padding: 0;
+  display: inline; }
+
+h4 {
+  font-size: 20px; }
+
+h5 {
+  font-weight: 400;
+  font-size: 14px; }
+
+.clearfix:after {
+  content: ".";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+
+/*# sourceMappingURL=style.css.map */

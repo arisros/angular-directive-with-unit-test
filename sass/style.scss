@@ -1,0 +1,67 @@
+$orange-color : #E87E3E;
+$yellow-color : #EABE55;
+$green-color : #55C88F;
+
+.orange {
+	background:  $orange-color;
+}
+.yellow {
+	background: $yellow-color;
+}
+.green {
+	background: $green-color;
+}
+.box-counter {
+	position: relative;
+	color: white;
+	float: left;
+	margin: 4px;
+	width: 200px;
+	height: 50px;
+}
+.orange .box-footer{
+	background: darken($orange-color, 10%);
+}
+.yellow .box-footer{
+	background: darken($yellow-color, 10%)		
+}
+.green .box-footer{
+	background: darken($green-color, 10%)
+}
+
+.box-counter .box-footer {
+	width: 200px;
+	position: absolute;
+	bottom: 0;
+	font-size: 12px;
+}
+.box-counter div:first-child{
+
+}
+.box-counter div:nth-child(2){
+
+
+}
+span {
+	padding: 5px;
+}
+h4,h5 {
+	margin:0;
+	padding:0;
+	display: inline;
+}
+h4 {
+	font-size: 20px;
+}
+h5 {
+	font-weight: 400;
+	font-size:14px;
+}
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}

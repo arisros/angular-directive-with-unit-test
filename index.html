@@ -1,0 +1,32 @@
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>This directive</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
+	
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="node_modules/angular-material/angular-material.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/box-directive.js"></script>
+	<script src="js/box-controller.js"></script>
+</head>
+<body>
+	
+	<box-counter 
+		resource="api/new-tender.json" title="'New Tender'" 
+		foot-text="'Total Tender'" class="box-counter orange">
+	</box-counter>
+	<box-counter 
+		resource="api/update-stage-today.json" title="'Update Stage Today'" 
+		foot-text="'shouldnt like this'" class="box-counter yellow">
+	</box-counter> 
+	<box-counter 
+		resource="api/tender-you-bid.json" title="'Tender You Bid'" 
+		foot-text="'Active Tender'" class="box-counter green">
+	</box-counter> 
+
+</body>
+</html>
