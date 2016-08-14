@@ -12,6 +12,8 @@ angular.module('app').directive('boxCounter', function($http) {
 			footText: '='
 		},
 		link: function(scope, element, attributes) {
+			scope.icon = attributes.icon;
+			if(scope.icon == 'graph') { scope.graph=true; }
       $http.get(attributes.resource).success(function(response) {
         scope.rows = response.data;
         console.log(scope.rows);

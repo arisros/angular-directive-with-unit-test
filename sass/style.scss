@@ -1,67 +1,87 @@
+// 
+
 $orange-color : #E87E3E;
 $yellow-color : #EABE55;
 $green-color : #55C88F;
 
-.orange {
-	background:  $orange-color;
+body {
+	font-family: 'Open Sans';
 }
-.yellow {
-	background: $yellow-color;
-}
-.green {
-	background: $green-color;
-}
-.box-counter {
-	position: relative;
-	color: white;
-	float: left;
-	margin: 4px;
-	width: 200px;
-	height: 50px;
-}
-.orange .box-footer{
-	background: darken($orange-color, 10%);
-}
-.yellow .box-footer{
-	background: darken($yellow-color, 10%)		
-}
-.green .box-footer{
-	background: darken($green-color, 10%)
-}
-
-.box-counter .box-footer {
-	width: 200px;
-	position: absolute;
-	bottom: 0;
-	font-size: 12px;
-}
-.box-counter div:first-child{
-
-}
-.box-counter div:nth-child(2){
-
-
-}
-span {
+.wrapper {
 	padding: 5px;
-}
-h4,h5 {
-	margin:0;
-	padding:0;
-	display: inline;
-}
-h4 {
-	font-size: 20px;
-}
-h5 {
-	font-weight: 400;
-	font-size:14px;
-}
 
-.clearfix:after { 
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
+	box-counter {
+		color: white;
+		height: 100px;
+		position: relative;
+
+		div.number {
+			font-size: 3em;
+			padding:2px 12px;
+			font-weight: 400;
+		}
+
+		div.title {
+			font-size: 1.2em;
+			padding:15px 5px;
+			font-weight: 400;
+		}
+		
+		.graph-icon {
+			position: absolute;
+			bottom: -5px;
+			right: 15px;
+
+			img {
+				width: 50px;
+			}
+		}
+
+		.box-footer {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			font-size: 14px;
+			height: 30px;
+			line-height: 30px;
+			padding:0 15px;
+			
+			p:last-child {
+				text-align: right;
+			}
+
+			p {
+				margin:0;
+				font-size: .9em;
+
+				b {
+					font-weight: 400;
+					text-align: right;
+					font-size: 1.2em;
+				}
+			}
+		}
+	}
+
+	.orange {
+	background:  $orange-color;
+		
+		.box-footer {
+		background: darken($orange-color, 10%);
+		}
+	}
+	.yellow {
+		background: $yellow-color;
+
+		.box-footer {
+		background: darken($orange-color, 10%);
+		}
+	}
+	.green {
+		background: $green-color;
+		.box-footer{
+			background: darken($green-color, 10%)
+		}
+	}
+
 }

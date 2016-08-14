@@ -1,16 +1,14 @@
 
  <div layout="row" ng-repeat="row in rows">
- 	<div flex="20">{{ row.value }}</div>
- 	<div flex="80">{{ title }}</div>
- 	<div flex="100" class="box-footer">
- 		<span>
+ 	<div flex-xs="20" class="number">{{ row.value }}</div>
+ 	<div flex-xs="80" class="title">{{ title }}</div>
+ 	<div ng-show="graph" class="graph-icon"><img src="/img/graph.svg" alt=""></div>
+ 	<div ng-hide="!row.total" flex-xs layout="row" layout="space-between end" class="box-footer">
+ 		<p flex="70">
  			{{ footText }}
- 		</span>
- 		<span>
+ 		</p>
+ 		<p flex="30" layout-align="right">
  			<b>{{ row.total }}</b>
- 		</span>
+ 		</p>
  	</div>		
  </div>
-
-
-

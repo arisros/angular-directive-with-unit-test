@@ -1,55 +1,54 @@
-.orange {
-  background: #E87E3E; }
+body {
+  font-family: 'Open Sans'; }
 
-.yellow {
-  background: #EABE55; }
-
-.green {
-  background: #55C88F; }
-
-.box-counter {
-  position: relative;
-  color: white;
-  float: left;
-  margin: 4px;
-  width: 200px;
-  height: 50px; }
-
-.orange .box-footer {
-  background: #d9621a; }
-
-.yellow .box-footer {
-  background: #e4ad28; }
-
-.green .box-footer {
-  background: #39b176; }
-
-.box-counter .box-footer {
-  width: 200px;
-  position: absolute;
-  bottom: 0;
-  font-size: 12px; }
-
-span {
+.wrapper {
   padding: 5px; }
-
-h4, h5 {
-  margin: 0;
-  padding: 0;
-  display: inline; }
-
-h4 {
-  font-size: 20px; }
-
-h5 {
-  font-weight: 400;
-  font-size: 14px; }
-
-.clearfix:after {
-  content: ".";
-  visibility: hidden;
-  display: block;
-  height: 0;
-  clear: both; }
+  .wrapper box-counter {
+    color: white;
+    height: 100px;
+    position: relative; }
+    .wrapper box-counter div.number {
+      font-size: 3em;
+      padding: 2px 12px;
+      font-weight: 400; }
+    .wrapper box-counter div.title {
+      font-size: 1.2em;
+      padding: 15px 5px;
+      font-weight: 400; }
+    .wrapper box-counter .graph-icon {
+      position: absolute;
+      bottom: -5px;
+      right: 15px; }
+      .wrapper box-counter .graph-icon img {
+        width: 50px; }
+    .wrapper box-counter .box-footer {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      font-size: 14px;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 15px; }
+      .wrapper box-counter .box-footer p:last-child {
+        text-align: right; }
+      .wrapper box-counter .box-footer p {
+        margin: 0;
+        font-size: .9em; }
+        .wrapper box-counter .box-footer p b {
+          font-weight: 400;
+          text-align: right;
+          font-size: 1.2em; }
+  .wrapper .orange {
+    background: #E87E3E; }
+    .wrapper .orange .box-footer {
+      background: #d9621a; }
+  .wrapper .yellow {
+    background: #EABE55; }
+    .wrapper .yellow .box-footer {
+      background: #d9621a; }
+  .wrapper .green {
+    background: #55C88F; }
+    .wrapper .green .box-footer {
+      background: #39b176; }
 
 /*# sourceMappingURL=style.css.map */
