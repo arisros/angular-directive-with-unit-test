@@ -1,0 +1,17 @@
+[
+	{
+		"value": 25,
+		"total": 240,
+		"type": "bigNumber"
+	},
+	{
+		"value": 30,
+		"total": 402,
+		"type": "bigNumberGraph"
+	},
+	{
+		"value": 11,
+		"total": 120,
+		"type": "bigNumberPencil"
+	}
+]

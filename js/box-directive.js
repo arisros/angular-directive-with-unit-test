@@ -1,40 +1,48 @@
+(function () {
+	'use strict';
 
-// box-counter resource="api/new-tender.json" title="New Tender" foot-text="Total Tender" class="orange"> 
-// box-counter resource="api/update-stage-today.json" title="Update Stage Today" foot-text="not should this" class="orange"> 
-// box-counter resource="api/tender-you-bid.json" title="Tender You Bid" footText="Active Tender" class="orange"> 
+	angular
+		.module('app')
+		.directive('boxCounter', boxCounter);
 
-angular
-	.module('app')
-	.directive('boxCounter', boxCounter);
+	boxCounter.$inject = ['$compile', '$templateRequest' ];
 
-	// injector
-	boxCounter.$inject = ['$http'];
+	function boxCounter($compile, $templateRequest) {
 
-	// fn
-	function boxCounter () {
-	
-		var fn = {
+		return {
 			restrict: 'AE',
-			templateUrl: 'templates/box.html',
+			link: linkFn,
 			scope: {
-				title: '=',
-				footText: '='
-			},
-			link: function(scope, element, attributes) {
-				scope.icon = attributes.icon;
-				if(scope.icon == 'graph') { scope.graph=true; }
-	      $http.get(attributes.resource).success(function(response) {
-	        scope.rows = response.data;
-	        console.log(scope.rows);
-	      });
-	    }
-  	};
-  return fn;
-}
+				content: '=',// data
+				type: '='//bigNumber, etc...
+			}
+		};	
 
-function () {
-var a = a;
+		function getTemplateUrl(contentType) {
+			var template = '';
 
+			switch (contentType) {
+				case 'bigNumber':
+					template = 'bigNumber.html';
+					break;
+				case 'bigNumberGraph':
+					template = 'bigNumberGraph.html';
+					break;
+				case 'bigNumberPencil':
+					template = 'bigNumberPencil.html';
+					break;
+			}
 
-}
+			return template;
+		}
 
+		function linkFn(scope, element, attrs) {
+			$templateRequest(getTemplateUrl(scope.type))
+				.then(function (html) {
+					element.html(html);
+					$compile(element.contents())(scope);
+				});
+		}
+	}
+
+})();
