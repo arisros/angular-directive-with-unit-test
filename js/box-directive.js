@@ -1,4 +1,7 @@
+(function () {
+	'use strict';
 
+<<<<<<< HEAD
 // box-counter resource="api/new-tender.json" title="New Tender" foot-text="Total Tender" class="orange"> 
 // box-counter resource="api/update-stage-today.json" title="Update Stage Today" foot-text="not should this" class="orange"> 
 // box-counter resource="api/tender-you-bid.json" title="Tender You Bid" footText="Active Tender" class="orange"> 
@@ -46,3 +49,58 @@ function boxCounter($http, TenderService) {
     }
   }
 }
+=======
+	angular
+		.module('app')
+		.directive('boxCounter', boxCounter);
+
+	boxCounter.$inject = ['$compile', '$templateRequest', '$templateCache'];
+
+	function boxCounter($compile, $templateRequest, $templateCache) {
+
+		return {
+			restrict: 'E',
+			link: linkFn,
+			replace: true,
+			scope: {
+				data: '=',// data
+				type: '='//bigNumber, etc...
+			}
+		};	
+
+		function getTemplateUrl(contentType) {
+			var template = '';
+
+			switch (contentType) {
+				case 'bigNumber':
+					template = 'bigNumber.html';
+					break;
+				case 'bigNumberGraph':
+					template = 'bigNumberGraph.html';
+					break;
+				case 'bigNumberPencil':
+					template = 'bigNumberPencil.html';
+					break;
+			}
+
+			return template;
+		}
+
+		function linkFn(scope, element, attrs) {
+
+			$templateRequest(getTemplateUrl(scope.type))
+				.then(function (html) {
+					element.html(html);
+					$compile(element.contents())(scope);
+				},
+				function(err) {
+					console.log(err);
+				}
+			);
+				
+		}
+
+	}
+
+})();
+>>>>>>> temp
