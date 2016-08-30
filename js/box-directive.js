@@ -5,15 +5,16 @@
 		.module('app')
 		.directive('boxCounter', boxCounter);
 
-	boxCounter.$inject = ['$compile', '$templateRequest' ];
+	boxCounter.$inject = ['$compile', '$templateRequest', '$templateCache'];
 
-	function boxCounter($compile, $templateRequest) {
+	function boxCounter($compile, $templateRequest, $templateCache) {
 
 		return {
-			restrict: 'AE',
+			restrict: 'E',
 			link: linkFn,
+			replace: true,
 			scope: {
-				content: '=',// data
+				data: '=',// data
 				type: '='//bigNumber, etc...
 			}
 		};	
@@ -37,12 +38,19 @@
 		}
 
 		function linkFn(scope, element, attrs) {
+
 			$templateRequest(getTemplateUrl(scope.type))
 				.then(function (html) {
 					element.html(html);
 					$compile(element.contents())(scope);
-				});
+				},
+				function(err) {
+					console.log(err);
+				}
+			);
+				
 		}
+
 	}
 
 })();

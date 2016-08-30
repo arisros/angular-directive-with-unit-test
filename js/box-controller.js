@@ -10,9 +10,8 @@
 
 	function BoxController(DataService) {
 		var vm = this;
-
 		vm.content = {};
-		vm.fetchContent = function() {
+		vm.fetchContent = function () {
 			DataService.getData().then(function (result) {
 				vm.content = result.data;
 			});
