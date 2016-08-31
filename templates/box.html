@@ -1,7 +1,14 @@
+<<<<<<< HEAD
+<!-- Still lot classes, confuse with child -->
+ <div layout="row" ng-repeat="row in rows">
+ 	<div flex-xs="20" class="number">{{ row.value }}</div>
+=======
 
  <div layout="row">
  	<div flex-xs="33" class="number">{{ value }}</div>
+>>>>>>> temp
  	<div flex-xs="80" class="title">{{ title }}</div>
+ 	<!-- Need Fix, Because still in element browser if not have value of "icon" attribute -->
  	<div ng-show="graph" class="graph-icon"><img src="/img/graph.svg" alt=""></div>
  	<div ng-hide="!row.total" flex-xs layout="row" layout="space-between end" class="box-footer">
  		<p flex="70">
