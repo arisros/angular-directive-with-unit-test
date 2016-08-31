@@ -1,0 +1,29 @@
+$primary: #477199;
+.loginWrapper {
+	width:440px;
+
+	.loginField {
+		padding:25px;
+	}
+
+	.md-raised {
+		background:$primary;
+		span {
+			text-transform: none;
+			color:white;
+			font-size: 20px;
+		}
+		
+	}
+
+	.md-button.md-raised:not([disabled]):hover {
+		background:lighten($primary, 10%);
+	}
+}
+
+.logo {
+	img {
+		width:160px;
+	}
+
+}

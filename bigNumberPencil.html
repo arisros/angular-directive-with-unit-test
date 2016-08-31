@@ -1,1 +1,14 @@
-<h1>{{ data.type }} PENCIL {{ data.value }}</h1>
+
+ <div layout="row" class="box-counter green">
+ 	<div flex-xs="33" class="number">{{ data.value }}</div>
+ 	<div flex-xs="80" class="title">Tender</div>
+ 	<div flex-xs layout="row" layout="space-between end" class="box-footer">
+ 		<p flex="70">
+ 			Total Tender
+ 		</p>
+ 		<p flex="30" layout-align="right">
+ 			<b>{{ data.total }}</b>
+ 		</p>
+ 	</div>		
+</div>
+

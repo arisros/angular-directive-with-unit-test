@@ -6,20 +6,16 @@
 		.module('app')
 		.factory('DataService', DataService);
 
-	DataService.$inject = [];
+	DataService.$inject = ['$http'];
 
-	function DataService() {
+	function DataService($http) {
 		
 		return {
 			getData : getData
 		};
 
 		function getData() {
-			return {
-				"value": 25,
-				"total": 240,
-				"type": "bigNumber"
-			};
+			return $http.get('api/data.json');
 		}
 	}
 

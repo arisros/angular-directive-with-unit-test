@@ -4,38 +4,88 @@
 
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Try Angular Material</title>
+	<title>Login - Eproc</title>
 	<!-- Css -->
-	<link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
 	<link rel="stylesheet" href="node_modules/open-sans-fontface/open-sans.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="lib/css/dep.css">
+	<link rel="stylesheet" href="lib/css/app.css">
 
 </head>
 
 <body ng-cloak ng-app="app">
-	
-	<md-toolbar layout-padding>
-		Dashboard
-	</md-toolbar>
 
-	<!-- Box Counter -->
-	<div ng-controller="BoxController as vm">
-		<box-counter data="vm.content" type="'bigNumberGraph'"></box-counter>
-		<box-counter data="vm.content" type="'bigNumberPencil'"></box-counter>	
-	</div> 
+	
+
+
+
+	<div layout="row" layout-align="center center">
+	  <div class="loginWrapper">
+
+	  	<div layout="row" layout-align="center center" class="logo">
+	  		<img src="lib/images/Paypal.png" alt="logo">
+	  	</div>
+
+	  	<md-card layout="column" class="loginField">
+
+	  		<div layout="row" layout-align="center center">
+	  			
+	  			<md-button class="md-fab md-primary">
+	  				<md-icon md-jpg-src="lib/images/facebook.jpg"></md-icon>
+	  			</md-button>
+					<md-button class="md-fab md-primary">
+						<md-icon ng-src="lib/images/facebook.jpg"></md-icon>
+					</md-button>
+					<md-button class="md-fab md-primary">
+	  				<md-icon ng-src="lib/images/facebook.jpg"></md-icon>
+	  			</md-button>
+					<md-button class="md-fab md-primary">
+						<md-icon ng-src="lib/images/facebook.jpg"></md-icon>
+					</md-button>
+	  		</div>
+
+	  		<div class="hr"><span>or</span></div>
+
+	  		<div class="loginForm" layout="column">
+	  			<!-- Input Email -->
+	  			<md-input-container>
+	  				<label for="">Email</label>
+	  				<input type="email">
+	  			</md-input-container>
+	  			<!-- Input Password -->
+	  			<md-input-container>	
+						<label for="">Password</label>
+						<input type="password">
+	  			</md-input-container>
+	  			
+	  			
+					<div layout="row">
+						<md-input-container>
+		          <md-switch class="md-primary" md-no-ink aria-label="Switch No Ink" ng-model="data.cb5">
+						    Remember me
+						  </md-switch>
+		        </md-input-container>
+		  			<a href="">Forgot Passsword ?</a>
+
+					</div>
+
+
+	  			<div layout>
+	  				<md-button flex="100" class="md-raised">Login</md-button>
+	  			</div>
+	  		</div>
+
+
+
+	  	</md-card>
+
+	  </div>
+	</div>
+	
+	<div class="mockUp"></div>
 
 	<!-- Dependencies -->
-	<script src="node_modules/angular/angular.min.js"></script>
-	<script src="node_modules/angular-animate/angular-animate.min.js"></script>
-	<script src="node_modules/angular-aria/angular-aria.min.js"></script>
-	<script src="node_modules/angular-material/angular-material.min.js"></script>
-	
-	<!-- Module Javascript -->
-	<script src="js/app.js"></script>
-	<script src="js/box-directive.js"></script>
-	<script src="js/box-controller.js"></script>
-	<script src="js/box-service.js"></script>
-
+	<script src="lib/dep.js"></script>
+	<script src="lib/app.js"></script>
 </body>
 </html>
 
