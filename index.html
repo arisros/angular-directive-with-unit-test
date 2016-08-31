@@ -14,74 +14,76 @@
 
 <body ng-cloak ng-app="app">
 
-	
+	<div layout="row" layout-align="center center" layout-gt-xs="row" layout-align-gt-xs="center center">
+	  <div class="login-wrapper">
 
-
-
-	<div layout="row" layout-align="center center">
-	  <div class="loginWrapper">
-
+			<!-- Logo -->
 	  	<div layout="row" layout-align="center center" class="logo">
 	  		<img src="lib/images/Paypal.png" alt="logo">
 	  	</div>
+			
+			<!-- Login Box -->
+	  	<md-card layout="column" class="login-field">
 
-	  	<md-card layout="column" class="loginField">
-
+	  		<!-- Login button with Social Media Account -->
 	  		<div layout="row" layout-align="center center">
-	  			
-	  			<md-button class="md-fab md-primary">
-	  				<md-icon md-jpg-src="lib/images/facebook.jpg"></md-icon>
+	  			<md-button class="md-fab md-primary sm-google">
 	  			</md-button>
-					<md-button class="md-fab md-primary">
-						<md-icon ng-src="lib/images/facebook.jpg"></md-icon>
+					<md-button class="md-fab md-primary sm-facebook">
 					</md-button>
-					<md-button class="md-fab md-primary">
-	  				<md-icon ng-src="lib/images/facebook.jpg"></md-icon>
+					<md-button class="md-fab md-primary sm-linkedin">
 	  			</md-button>
-					<md-button class="md-fab md-primary">
-						<md-icon ng-src="lib/images/facebook.jpg"></md-icon>
+					<md-button class="md-fab md-primary sm-twitter">
 					</md-button>
 	  		</div>
 
-	  		<div class="hr"><span>or</span></div>
+				<!-- Divider -->
+	  		<div class="divider" ><span>or</span></div>
 
 	  		<div class="loginForm" layout="column">
 	  			<!-- Input Email -->
-	  			<md-input-container>
-	  				<label for="">Email</label>
-	  				<input type="email">
+	  			<md-input-container md-no-float class="md-block dashed">
+	  				<md-icon md-svg-src="lib/images/email.svg"></md-icon>
+      			<input type="text" placeholder="email">
 	  			</md-input-container>
 	  			<!-- Input Password -->
-	  			<md-input-container>	
-						<label for="">Password</label>
-						<input type="password">
+	  			<md-input-container md-no-float class="md-block dashed">
+	  				<md-icon md-svg-src="lib/images/padlock.svg"></md-icon>
+      			<input type="password" placeholder="password">
 	  			</md-input-container>
-	  			
+
 	  			
 					<div layout="row">
-						<md-input-container>
+						<md-input-container flex>
 		          <md-switch class="md-primary" md-no-ink aria-label="Switch No Ink" ng-model="data.cb5">
-						    Remember me
+						    Remember Me
 						  </md-switch>
 		        </md-input-container>
-		  			<a href="">Forgot Passsword ?</a>
-
+						
+		  			<md-input-container flex>
+		  				<a href="" layout="row" layout-align="end">Forgot Passsword ?</a>
+		  			</md-input-container>
 					</div>
 
 
 	  			<div layout>
 	  				<md-button flex="100" class="md-raised">Login</md-button>
 	  			</div>
+
+	  			<a href="" layout="row" layout-align="center center">
+	  				Don't have account ? sign up here	
+	  			</a>
+
 	  		</div>
 
-
-
 	  	</md-card>
+
+	  	<p class="text-footer" layout="row" layout-align="center center"> Copyright &copy All Right Reserved - PT. Docotel</p>
 
 	  </div>
 	</div>
 	
-	<div class="mockUp"></div>
+	<!-- <div class="mock-up"></div> -->
 
 	<!-- Dependencies -->
 	<script src="lib/dep.js"></script>

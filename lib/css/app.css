@@ -1,37 +1,178 @@
-.loginWrapper {
+.login-wrapper {
   width: 440px;
 }
 
-.loginWrapper .loginField {
+.login-wrapper md-card {
+  border-radius: 5px;
+  box-shadow: 0 0 5px #d3d3d3;
+}
+
+.login-wrapper .logo {
+  margin: 15px 0;
+}
+
+.login-wrapper .logo img {
+  width: 160px;
+}
+
+.login-wrapper .login-field {
   padding: 25px;
 }
 
-.loginWrapper .md-raised {
-  background: #477199;
+.login-wrapper .login-field a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #44739D;
 }
 
-.loginWrapper .md-raised span {
+.login-wrapper .login-field .md-button.md-fab {
+  width: 43px;
+  height: 43px;
+  box-shadow: none;
+}
+
+.login-wrapper .login-field .sm-facebook {
+  background: url("../images/facebook.jpg") no-repeat center center;
+  background-size: 110%;
+}
+
+.login-wrapper .login-field .sm-google {
+  background: url("../images/google.png") no-repeat center center;
+  background-size: 110%;
+}
+
+.login-wrapper .login-field .sm-linkedin {
+  background: url("../images/linkedin.png") no-repeat center center;
+  background-size: 100%;
+}
+
+.login-wrapper .login-field .sm-twitter {
+  background: url("../images/twitter.png") no-repeat center center;
+  background-size: 100%;
+}
+
+.login-wrapper .login-field .divider {
+  background: #e8e8e8;
+  margin: 20px auto;
+  width: 62%;
+  height: 2px;
+  text-align: center;
+}
+
+.login-wrapper .login-field .divider span {
+  position: relative;
+  top: -18px;
+  color: #d6d6d6;
+  background: white;
+  padding: 7px;
+  font-size: 22px;
+}
+
+.login-wrapper .login-field md-input-container .md-errors-spacer {
+  display: none;
+}
+
+.login-wrapper .login-field md-input-container md-icon {
+  min-height: 20px;
+  min-width: 20px;
+  height: 20px;
+  width: 20px;
+}
+
+.login-wrapper .login-field md-input-container.dashed {
+  border-bottom: dashed #ccc 1px;
+  padding-bottom: 10px;
+}
+
+.login-wrapper .login-field md-input-container {
+  margin: 20px 0 0 0;
+}
+
+.login-wrapper .login-field md-input-container a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #999;
+}
+
+.login-wrapper .login-field input[type="text"].md-input,
+.login-wrapper .login-field input[type="password"].md-input {
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.login-wrapper .login-field input[placeholder] {
+  color: #999999;
+}
+
+.login-wrapper .login-field md-switch {
+  margin: 0;
+  padding: 0;
+}
+
+.login-wrapper .login-field md-switch ._md-container {
+  margin: 0;
+  width: 30px;
+  height: 20px;
+}
+
+.login-wrapper .login-field md-switch ._md-bar {
+  border: 1px solid #999999;
+  box-shadow: none;
+  height: 9px;
+  width: 20px;
+  border-radius: 4px;
+  background: none;
+}
+
+.login-wrapper .login-field md-switch ._md-thumb-container {
+  width: 10px;
+}
+
+.login-wrapper .login-field md-switch ._md-thumb {
+  top: 1px;
+  width: 15px;
+  height: 15px;
+  box-shadow: none;
+  background: #44739D;
+}
+
+.login-wrapper .login-field md-switch ._md-label {
+  color: #999999;
+  font-size: 15px;
+}
+
+.login-wrapper .login-field .md-raised {
+  background: #44739D;
+  box-shadow: none;
+  margin: 30px 0 30px 0;
+  padding: 5px 0;
+}
+
+.login-wrapper .login-field .md-raised span {
   text-transform: none;
-  color: white;
+  color: #FFFFFF;
   font-size: 20px;
 }
 
-.loginWrapper .md-button.md-raised:not([disabled]):hover {
-  background: #5e8bb5;
+.login-wrapper .login-field .md-button.md-raised:not([disabled]):hover {
+  background: #5c8db8;
 }
 
-.logo img {
-  width: 160px;
+.text-footer {
+  font-size: 12px;
+  color: #999999;
 }
 
 body {
   font-family: 'Open Sans';
+  background: #F0F0F0;
 }
 
-.mockUp {
+.mock-up {
   background: url("../../lib/images/login_page1.jpg") center;
   display: block;
-  z-index: -999;
+  z-index: 0;
   width: 100%;
   height: 100%;
   margin: 0 auto;
