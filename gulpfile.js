@@ -11,17 +11,24 @@
 	var reload = browserSync.reload;
 
 	gulp.task('depJs', function () {
-		var gulpNg = gulp.src('node_modules/angular/angular.js');
-		var gulpNgMaterial = gulp.src('node_modules/angular-material/angular-material.js');
-		var gulpNgAria = gulp.src('node_modules/angular-aria/angular-aria.js');
-		var gulpNgMocks = gulp.src('node_modules/angular-mocks/angular-mocks.js');
-		var gulpNgAnimate = gulp.src('node_modules/angular-animate/angular-animate.js');
+		var depAng = gulp.src('node_modules/angular/angular.js');
+		var DepAngMaterial = gulp.src('node_modules/angular-material/angular-material.js');
+		var DepAngAria = gulp.src('node_modules/angular-aria/angular-aria.js');
+		var DepAngMocks = gulp.src('node_modules/angular-mocks/angular-mocks.js');
+		var DepAngAnimate = gulp.src('node_modules/angular-animate/angular-animate.js');
+		var DepAngUiRouter = gulp.src('node_modules/angular-ui-router/release/angular-ui-router.min.js');
 
-		var mergeStream = merge(gulpNg, gulpNgMaterial, gulpNgAria, gulpNgAnimate, gulpNgMocks)
-			.pipe(uglify())
+		var jsDepMerge = merge(
+												depAng, 
+												DepAngMaterial, 
+												DepAngAria, 
+												DepAngMocks, 
+												DepAngAnimate,
+												DepAngUiRouter)
+			// .pipe(uglify())
 			.pipe(concat('dep.js'))
 			.pipe(gulp.dest('lib/'));
-		return mergeStream;
+		return jsDepMerge;
 	});
 
 	gulp.task('depCss', function () {
@@ -48,6 +55,7 @@
 	});
 
 	gulp.task('sass-watch', ['sass'], reload);
+	gulp.task('js-watch', ['js'], reload);
 
 	gulp.task('production',  ['depCss', 'depJs', 'sass', 'js'], function () {
 		browserSync({server: {
@@ -55,6 +63,7 @@
 			}
 		});
 
+		gulp.watch('js/*.js', ['js-watch']);
 		gulp.watch('sass/*.scss', ['sass-watch']);
 		gulp.watch('index.html').on('change', browserSync.reload);
 	});
