@@ -28,13 +28,13 @@
 	
 		  		<!-- Login button with Social Media Account -->
 		  		<div layout="row" layout-align="center center">
-		  			<md-button class="md-fab md-primary sm-google">
+		  			<md-button class="md-fab md-primary sm-google" aria-label="google button">
 		  			</md-button>
-						<md-button class="md-fab md-primary sm-facebook">
+						<md-button class="md-fab md-primary sm-facebook" aria-label="facebook button">
 						</md-button>
-						<md-button class="md-fab md-primary sm-linkedin">
+						<md-button class="md-fab md-primary sm-linkedin" aria-label="linkedin button">
 		  			</md-button>
-						<md-button class="md-fab md-primary sm-twitter">
+						<md-button class="md-fab md-primary sm-twitter" aria-label="twitter button">
 						</md-button>
 		  		</div>
 	
@@ -56,7 +56,7 @@
 		  			
 						<div layout="row">
 							<md-input-container flex>
-			          <md-switch class="md-primary" md-no-ink aria-label="Switch No Ink" ng-model="data.cb5" >
+			          <md-switch class="md-primary" md-no-ink aria-label="Remember me" ng-model="data.cb5" >
 							    Remember Me
 							  </md-switch>
 			        </md-input-container>
@@ -66,9 +66,8 @@
 			  			</md-input-container>
 						</div>
 	
-	
 		  			<div layout>
-		  				<md-button  flex="100" type="submit" class="md-raised login-button">Login</md-button>
+		  				<md-button type="submit" class="md-raised login-button">Login</md-button>
 		  			</div>
 	
 		  			<a href="" layout="row" layout-align="center center">

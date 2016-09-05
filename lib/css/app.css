@@ -107,10 +107,11 @@
   margin-top: 5px;
   text-decoration: none;
   color: #999;
+  position: relative;
 }
 
-.login-wrapper .login-field md-input-container a:hover {
-  border-bottom: 1px solid #44739D;
+.login-wrapper .login-field md-input-container .flex:after {
+  border-bottom: 1px dotted #44739D;
 }
 
 .login-wrapper .login-field input[type="text"].md-input,
@@ -176,6 +177,7 @@
 
 .login-wrapper .login-field .md-raised {
   background: #44739D;
+  width: 100%;
   box-shadow: none;
   margin: 30px 0 30px 0;
   padding: 5px 0;

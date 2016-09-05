@@ -5,6 +5,10 @@ $warningColor: yellow;
 $errorColor: red;
 $successColor: green;
 
+button.login-button {
+
+}
+
 .warning .md-toast-content {
 	background: $warningColor;
 }
@@ -105,10 +109,11 @@ $successColor: green;
 				margin-top: 5px;
 				text-decoration: none;
 				color:#999;
+				position: relative;
 
 			}
-			a:hover {
-				border-bottom: 1px solid $primary;
+			.flex:after {
+				border-bottom: 1px dotted $primary;
 				}
 		}
 		
@@ -171,9 +176,9 @@ $successColor: green;
 			font-size: 15px;
 		}
 
-
 		.md-raised {
 			background:$primary;
+			width: 100%;
 			box-shadow: none;
 			margin:30px 0 30px 0;
 			padding:5px 0;
@@ -183,6 +188,7 @@ $successColor: green;
 				font-size: 20px;
 			}	
 		}
+
 		.md-focused {
 			background:none;
 		}

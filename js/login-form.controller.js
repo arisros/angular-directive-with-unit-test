@@ -10,50 +10,49 @@
 
 	function LoginFormController($mdToast) {
 		var vm = this;
-		vm.check = check;
+		vm.checkLogin = checkLogin;
 		vm.loginAuth = loginAuth;
 		vm.message = '';
 		vm.email ='';
 		vm.password='';
 
-		function check() {
+		function checkLogin() {
 			vm.message = '';
-			if (vm.email === '') {
+			vm.error = '';
+			
+			// checkLogin empty
+			if (!vm.email) {
 				vm.message = 'email is empty';
-				vm.type = 'error';
+				vm.error = true;
 			}
 
-			if (vm.password === '') {
+			else if (!vm.password) {
 				vm.message = 'password is empty';
-				vm.type = 'error';
+				vm.error = true;
 			}
 
-			if (vm.email === '' && vm.password === '') {
-				vm.message = 'email and password is empty';
-				vm.type = 'error';
+			else {
+				vm.error = false;
 			}
+
+			// Get Type
+			if (!vm.error) {
+				vm.type = 'success';
+				vm.message = 'Welcome back, ' + vm.email + '!';
+			}
+			else { vm.type = 'error'; }
 
 		}
 
-		function checkAuth() {
-				if (vm.email === 'arisjirat@gmail.com') {
-					vm.message = 'Thanks Ariros';
-					vm.type = 'success';
-				}
-
-				else {
-					vm.message = '<b>' + vm.email + '</b>' + ' not registered';
-					vm.type = 'error';
-				}
-		} 
-
+		/**
+		 * Run checkLogin and show the mdToast
+		 */
 		function loginAuth() {
-			check();
-			checkAuth();
+			checkLogin();
 			var myProp = {
 				hideDelay: 3000,
 				position: 'top right',
-				template: '<md-toast id="my-md-toast" class="md-toast '+ vm.type +'"><span class="md-toast-text" flex>'+ vm.message +'<span></md-toast>'
+				template: '<md-toast class="md-toast '+ vm.type +'"><span id="md-toast-text" class="md-toast-text" flex>'+ vm.message +'<span></md-toast>'
 			};
 			$mdToast.show(myProp);
 			vm.message = '';
