@@ -9,88 +9,79 @@ body {
 	font-family: 'Open Sans';
 	background:#F0F0F0;
 }
-.mock-up {
-	background: url('../../lib/images/login_page1.jpg')center;
-	display: inline-block;
-	z-index:1;
-	margin-top: 1000px;
-	width: 100%;
-	height: 10000px;
-	margin:0 auto;
-}
 
-	// .box-counter {
-	// 	margin:10px;
-	// 	color: white;
-	// 	height: 100px;
-	// 	position: relative;
+	.box-counter {
+		margin:10px;
+		color: white;
+		height: 100px;
+		position: relative;
 
-	// 	div.number {
-	// 		font-size: 3em;
-	// 		padding:2px 12px;
-	// 		font-weight: 400;
-	// 	}
+		div.number {
+			font-size: 3em;
+			padding:2px 12px;
+			font-weight: 400;
+		}
 
-	// 	div.title {
-	// 		font-size: 1.2em;
-	// 		padding:15px 5px;
-	// 		font-weight: 400;
-	// 	}
+		div.title {
+			font-size: 1.2em;
+			padding:15px 5px;
+			font-weight: 400;
+		}
 		
-	// 	.graph-icon {
-	// 		position: absolute;
-	// 		bottom: -5px;
-	// 		right: 15px;
+		.icon {
+			position: absolute;
+			bottom: 5px;
+			right: 15px;
 
-	// 		img {
-	// 			width: 50px;
-	// 		}
-	// 	}
+			img {
+				width: 50px;
+			}
+		}
 
-	// 	.box-footer {
-	// 		width: 100%;
-	// 		position: absolute;
-	// 		bottom: 0;
-	// 		font-size: 14px;
-	// 		height: 30px;
-	// 		line-height: 30px;
-	// 		padding:0 15px;
+		.box-footer {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			font-size: 14px;
+			height: 30px;
+			line-height: 30px;
+			padding:0 15px;
 			
-	// 		p:last-child {
-	// 			text-align: right;
-	// 		}
+			p:last-child {
+				text-align: right;
+			}
 
-	// 		p {
-	// 			margin:0;
-	// 			font-size: .9em;
+			p {
+				margin:0;
+				font-size: .9em;
 
-	// 			b {
-	// 				font-weight: 400;
-	// 				text-align: right;
-	// 				font-size: 1.2em;
-	// 			}
-	// 		}
-	// 	}
-	// }
+				b {
+					font-weight: 400;
+					text-align: right;
+					font-size: 1.2em;
+				}
+			}
+		}
+	}
 
-	// .orange {
-	// background:  $orange-color;
+	.orange {
+	background:  $orange-color;
 		
-	// 	.box-footer {
-	// 	background: darken($orange-color, 10%);
-	// 	}
-	// }
-	// .yellow {
-	// 	background: $yellow-color;
+		.box-footer {
+		background: darken($orange-color, 10%);
+		}
+	}
+	.yellow {
+		background: $yellow-color;
 
-	// 	.box-footer {
-		// background: darken($orange-color, 10%);
-	// 	}
-	// }
-	// .green {
-	// 	background: $green-color;
-	// 	.box-footer{
-	// 		background: darken($green-color, 10%)
-	// 	}
-	// }
+		.box-footer {
+		background: darken($orange-color, 10%);
+		}
+	}
+	.green {
+		background: $green-color;
+		.box-footer{
+			background: darken($green-color, 10%)
+		}
+	}
 

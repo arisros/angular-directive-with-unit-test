@@ -1,222 +1,83 @@
-.warning .md-toast-content {
-  background: yellow;
-}
-
-.error .md-toast-content {
-  background: red;
-}
-
-.success .md-toast-content {
-  background: green;
-}
-
-.login-wrapper {
-  width: 400px;
-  font-family: "Open Sans" !important;
-}
-
-.login-wrapper md-card {
-  border-radius: 5px;
-  box-shadow: 0 0 5px #d3d3d3;
-}
-
-.login-wrapper .logo {
-  margin: 15px 0;
-}
-
-.login-wrapper .logo img {
-  width: 160px;
-}
-
-.login-wrapper .login-field {
-  padding: 25px;
-}
-
-.login-wrapper .login-field a {
-  font-size: 14px;
-  text-decoration: none;
-  color: #44739D;
-}
-
-.login-wrapper .login-field .md-button.md-fab {
-  width: 43px;
-  height: 43px;
-  box-shadow: none;
-}
-
-.login-wrapper .login-field .sm-facebook {
-  background: url("../images/facebook.jpg") no-repeat center center;
-  background-size: 110%;
-}
-
-.login-wrapper .login-field .sm-google {
-  background: url("../images/google.png") no-repeat center center;
-  background-size: 110%;
-}
-
-.login-wrapper .login-field .sm-linkedin {
-  background: url("../images/linkedin.png") no-repeat center center;
-  background-size: 100%;
-}
-
-.login-wrapper .login-field .sm-twitter {
-  background: url("../images/twitter.png") no-repeat center center;
-  background-size: 100%;
-}
-
-.login-wrapper .login-field .divider {
-  background: #e8e8e8;
-  margin: 20px auto;
-  width: 62%;
-  height: 2px;
-  text-align: center;
-}
-
-.login-wrapper .login-field .divider span {
-  position: relative;
-  top: -18px;
-  color: #d6d6d6;
-  background: white;
-  padding: 7px;
-  font-size: 22px;
-}
-
-.login-wrapper .login-field md-input-container .md-errors-spacer {
-  display: none;
-}
-
-.login-wrapper .login-field md-input-container md-icon {
-  top: 10px;
-  min-height: 18px;
-  min-width: 18px;
-  height: 18px;
-  width: 18px;
-}
-
-.login-wrapper .login-field md-input-container.dashed {
-  border-bottom: dashed #ccc 1px;
-  padding-bottom: 10px;
-}
-
-.login-wrapper .login-field md-input-container {
-  margin: 20px 0 0 0;
-}
-
-.login-wrapper .login-field md-input-container a {
-  font-size: 14px;
-  margin-top: 5px;
-  text-decoration: none;
-  color: #999;
-  position: relative;
-}
-
-.login-wrapper .login-field md-input-container .flex:after {
-  border-bottom: 1px dotted #44739D;
-}
-
-.login-wrapper .login-field input[type="text"].md-input,
-.login-wrapper .login-field input[type="password"].md-input {
-  border: none;
-  font-size: 18px;
-  letter-spacing: 0.5px;
-}
-
-.login-wrapper .login-field input[placeholder] {
-  color: #999999;
-}
-
-.login-wrapper .login-field md-switch {
-  margin: 0;
-  padding: 0;
-  background: none;
-}
-
-.login-wrapper .login-field md-switch :focus {
-  background: none;
-}
-
-.login-wrapper .login-field md-switch :focused {
-  background: none;
-}
-
-.login-wrapper .login-field .md-fab.md-focused {
-  background: #44739D;
-}
-
-.login-wrapper .login-field md-switch ._md-container {
-  margin: 0;
-  width: 30px;
-  height: 20px;
-}
-
-.login-wrapper .login-field md-switch ._md-bar {
-  border: 1px solid #999999;
-  box-shadow: none;
-  height: 9px;
-  width: 20px;
-  border-radius: 4px;
-  background: none;
-}
-
-.login-wrapper .login-field md-switch ._md-thumb-container {
-  width: 10px;
-}
-
-.login-wrapper .login-field md-switch ._md-thumb {
-  top: 1px;
-  width: 15px;
-  height: 15px;
-  box-shadow: none;
-  background: #44739D;
-}
-
-.login-wrapper .login-field md-switch ._md-label {
-  color: #999999;
-  font-size: 15px;
-}
-
-.login-wrapper .login-field .md-raised {
-  background: #44739D;
-  width: 100%;
-  box-shadow: none;
-  margin: 30px 0 30px 0;
-  padding: 5px 0;
-}
-
-.login-wrapper .login-field .md-raised span {
-  text-transform: none;
-  color: #FFFFFF;
-  font-size: 20px;
-}
-
-.login-wrapper .login-field .md-focused {
-  background: none;
-}
-
-.login-wrapper .login-field .md-button.md-raised:not([disabled]):hover {
-  background: #5c8db8;
-}
-
-.login-wrapper .login-field .md-button.md-raised:not([disabled]).md-focused {
-  background: #5c8db8;
-}
-
-.text-footer {
-  font-size: 12px;
-  color: #999999;
-}
 
 body {
   font-family: 'Open Sans';
   background: #F0F0F0;
 }
 
-.mock-up {
-  background: url("../../lib/images/login_page1.jpg") center;
-  display: inline-block;
-  z-index: 1;
-  margin-top: 1000px;
+.box-counter {
+  margin: 10px;
+  color: white;
+  height: 100px;
+  position: relative;
+}
+
+.box-counter div.number {
+  font-size: 3em;
+  padding: 2px 12px;
+  font-weight: 400;
+}
+
+.box-counter div.title {
+  font-size: 1.2em;
+  padding: 15px 5px;
+  font-weight: 400;
+}
+
+.box-counter .icon {
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+}
+
+.box-counter .icon img {
+  width: 50px;
+}
+
+.box-counter .box-footer {
   width: 100%;
-  height: 10000px;
-  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+}
+
+.box-counter .box-footer p:last-child {
+  text-align: right;
+}
+
+.box-counter .box-footer p {
+  margin: 0;
+  font-size: .9em;
+}
+
+.box-counter .box-footer p b {
+  font-weight: 400;
+  text-align: right;
+  font-size: 1.2em;
+}
+
+.orange {
+  background: #E87E3E;
+}
+
+.orange .box-footer {
+  background: #d9621a;
+}
+
+.yellow {
+  background: #EABE55;
+}
+
+.yellow .box-footer {
+  background: #d9621a;
+}
+
+.green {
+  background: #55C88F;
+}
+
+.green .box-footer {
+  background: #39b176;
 }

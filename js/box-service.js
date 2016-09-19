@@ -9,7 +9,6 @@
 	DataService.$inject = ['$http'];
 
 	function DataService($http) {
-		
 		return {
 			getData : getData
 		};

@@ -8,49 +8,47 @@
 	boxCounter.$inject = ['$compile', '$templateRequest', '$templateCache'];
 
 	function boxCounter($compile, $templateRequest, $templateCache) {
-
 		return {
 			restrict: 'E',
 			link: linkFn,
-			replace: true,
 			scope: {
 				data: '=',// data
 				type: '='//bigNumber, etc...
-			}
+			},
 		};	
 
 		function getTemplateUrl(contentType) {
 			var template = '';
-
 			switch (contentType) {
-				case 'bigNumber':
-					template = 'bigNumber.html';
+				case 'big-number':
+					template = './templates/big-number.html';
 					break;
-				case 'bigNumberGraph':
-					template = 'bigNumberGraph.html';
+				case 'big-number-graph':
+					template = './templates/big-number-graph.html';
 					break;
-				case 'bigNumberPencil':
-					template = 'bigNumberPencil.html';
+				case 'big-number-pencil':
+					template = './templates/big-number-pencil.html';
 					break;
 			}
-
 			return template;
 		}
 
 		function linkFn(scope, element, attrs) {
-
 			$templateRequest(getTemplateUrl(scope.type))
 				.then(function (html) {
 					element.html(html);
-					$compile(element.contents())(scope);
+					// Replace true
+					element.replaceWith($compile(element.contents())(scope));
 				},
 				function(err) {
 					console.log(err);
 				}
-			);
-				
+			);			
 		}
 
 	}
 
 })();
+
+
+

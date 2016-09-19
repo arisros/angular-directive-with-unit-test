@@ -1,5 +1,4 @@
 (function (angular) {
-
 	'use strict';
 
 	angular
@@ -11,11 +10,14 @@
 	function BoxController(DataService) {
 		var vm = this;
 		vm.content = {};
-		vm.fetchContent = function () {
+		vm.fetchContent = fetchContent;
+
+		function fetchContent() {
 			DataService.getData().then(function (result) {
 				vm.content = result.data;
 			});
-		};
+		}
+
 		vm.fetchContent();
 	}
 
